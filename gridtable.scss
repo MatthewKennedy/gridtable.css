@@ -65,21 +65,22 @@ g-tr {
   gap: 0;
   grid-template-columns: inherit;
   border-bottom-width: 1px;
+
+  > * {
+    display: flex;
+    overflow: visible;
+    align-items: center;
+    min-height: 50px;
+    white-space: nowrap;
+    margin: 0;
+    padding: var(--gridtable-cell-padding-y) var(--gridtable-cell-padding-x);
+    background-color: var(--gridtable-bg);
+    text-decoration: none;
+  }
 }
 
 g-th {
   font-weight: var(--gridtable-th-font-weight);
-}
-
-g-th,
-g-td {
-  display: flex;
-  overflow: visible;
-  align-items: center;
-  min-height: 50px;
-  white-space: nowrap;
-  padding: var(--gridtable-cell-padding-y) var(--gridtable-cell-padding-x);
-  background-color: var(--gridtable-bg);
 }
 
 .gridtable-bordered {
