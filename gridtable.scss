@@ -32,7 +32,7 @@ g-table {
   // Ensure inheritance is passed through turbo-frames
   // Else add the class g-table-inherit.
   turbo-frame,
-  .g-table-inherit {
+  .gridtable-inherit {
     display: block;
     grid-template-columns: inherit;
   }
@@ -82,7 +82,7 @@ g-td {
   background-color: var(--gridtable-bg);
 }
 
-.g-table-bordered {
+.gridtable-bordered {
   border-width: var(--gridtable-border-color);
 
   g-td,
@@ -96,7 +96,7 @@ g-td {
   }
 }
 
-.g-table-borderless {
+.gridtable-borderless {
   g-td {
     border-width: 0;
   }
@@ -106,12 +106,12 @@ g-td {
   }
 }
 
-.g-table-active {
+.gridtable-active {
   background-color: var(--gridtable-active-bg);
   color: var(--gridtable-active-color);
 }
 
-.g-table-hover {
+.gridtable-hover {
   g-tbody g-tr:hover > * {
     background-color: var(--gridtable-hover-bg);
     color: var(--gridtable-hover-color);
