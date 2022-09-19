@@ -1,11 +1,77 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-
+  <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+  <link rel="stylesheet" href="gridtable.css">
 </head>
+  <body>
 
-<body>
-</body>
+    <h3>Table Example 1</h3>
+    <g-responsive>
+      <g-table style="grid-template-columns: 1fr 1fr 1fr 1fr;">
+        <g-thead>
+          <g-tr>
+            <g-th>Product</g-th>
+            <g-th>Price</g-th>
+            <g-th>State</g-th>
+            <g-th>Actions</g-th>
+          </g-tr>
+        </g-thead>
+        <g-tbody>
+          <g-tr>
+            <g-td>Adidas FCraft</g-td>
+            <g-td>$99.99</g-td>
+            <g-td>Available</g-td>
+            <g-td>Delete</g-td>
+          </g-tr>
 
+          <g-tr>
+            <g-td>Adidas Ultra4D</g-td>
+            <g-td>$199.99</g-td>
+            <g-td>Available</g-td>
+            <g-td>Delete</g-td>
+          </g-tr>
+
+          <g-tr>
+            <g-td>Adidas UltraBoost</g-td>
+            <g-td>$201.99</g-td>
+            <g-td>Available</g-td>
+            <g-td>Delete</g-td>
+          </g-tr>
+        </g-tbody>
+      </g-table>
+    </g-responsive>
+
+    <h3>Table Example 2</h3>
+    <span>Use of g-th in g-tbody</span>
+    <g-table style="grid-template-columns: 1fr 1fr 1fr 1fr;">
+      <g-thead>
+        <g-tr>
+          <g-th scope="col">#</g-th>
+          <g-th scope="col">First</g-th>
+          <g-th scope="col">Last</g-th>
+          <g-th scope="col">Handle</g-th>
+        </g-tr>
+      </g-thead>
+      <g-tbody>
+        <g-tr>
+          <g-th scope="row">1</g-th>
+          <g-td>Mark</g-td>
+          <g-td>Otto</g-td>
+          <g-td>@mdo</g-td>
+        </g-tr>
+        <g-tr>
+          <g-th scope="row">2</g-th>
+          <g-td>Jacob</g-td>
+          <g-td>Thornton</g-td>
+          <g-td>@fat</g-td>
+        </g-tr>
+        <g-tr>
+          <g-th scope="row">3</g-th>
+          <g-td colspan="2">Larry the Bird</g-td>
+          <g-td>@twitter</g-td>
+        </g-tr>
+      </g-tbody>
+    </g-table>
+  </body>
 </html>
