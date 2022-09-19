@@ -1,0 +1,36 @@
+{
+  "name": "gridtable.css",
+  "version": "0.1.0",
+  "description": "GridTable.css is simple way to create tables using custom DOM elements backed by the power of CSS Grid.",
+  "main": "gridtable.scss",
+  "files": [
+    "gridtable.css",
+    "gridtable.css.map",
+    "gridtable.min.css"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatthewKennedy/gridtable.css"
+  },
+  "author": "Matthew Kennedy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MatthewKennedy/gridtable.css/issues"
+  },
+  "scripts": {
+    "compileSass": "sass gridtable.scss gridtable.css --style=compressed --embed-sources"
+  },
+  "homepage": "https://github.com/MatthewKennedy/gridtable.css#readme",
+  "keywords": [
+    "css",
+    "html",
+    "gridtable.css",
+    "gridtable.org",
+    "gridtable",
+    "gridtable"
+  ],
+  "devDependencies": {
+    "dart-sass": "^1.25.0",
+    "sass": "^1.54.9"
+  }
+}
