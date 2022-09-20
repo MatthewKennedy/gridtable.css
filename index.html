@@ -47,28 +47,28 @@
     <g-table style="grid-template-columns: 1fr 1fr 1fr 1fr;">
       <g-thead>
         <g-tr>
-          <g-th scope="col">#</g-th>
-          <g-th scope="col">First</g-th>
-          <g-th scope="col">Last</g-th>
-          <g-th scope="col">Handle</g-th>
+          <g-th>#</g-th>
+          <g-th>First</g-th>
+          <g-th>Last</g-th>
+          <g-th>Handle</g-th>
         </g-tr>
       </g-thead>
       <g-tbody>
         <g-tr>
-          <g-th scope="row">1</g-th>
+          <g-th>1</g-th>
           <g-td>Mark</g-td>
           <g-td>Otto</g-td>
           <g-td>@mdo</g-td>
         </g-tr>
         <g-tr>
-          <g-th scope="row">2</g-th>
+          <g-th>2</g-th>
           <g-td>Jacob</g-td>
           <g-td>Thornton</g-td>
           <g-td>@fat</g-td>
         </g-tr>
         <g-tr>
-          <g-th scope="row">3</g-th>
-          <g-td colspan="2">Larry the Bird</g-td>
+          <g-th>3</g-th>
+          <g-td>Larry the Bird</g-td>
           <g-td>@twitter</g-td>
         </g-tr>
       </g-tbody>
@@ -113,6 +113,69 @@
             <g-td>Available</g-td>
             <g-td>Delete</g-td>
           </g-tr>
+        </g-tbody>
+      </g-table>
+    </g-responsive>
+
+
+    <h3>Table Example 4</h3>
+    <span>This example shows how using wrapper elements does not effect the table.</span>
+    <g-responsive>
+      <g-table class="gridtable-hover" style="grid-template-columns: 1fr 1fr 1fr 1fr;">
+        <g-thead>
+          <g-tr>
+            <g-th>Product</g-th>
+            <g-th>Price</g-th>
+            <g-th>State</g-th>
+            <g-th>Actions</g-th>
+          </g-tr>
+        </g-thead>
+        <g-tbody>
+          <g-tr>
+
+            <!-- a tags as table cells, neat! -->
+            <a href="#">
+             Adidas FCraft
+            </a>
+            <a href="#">
+              <g-td>$99.99</g-td>
+            </a>
+            <a href="#">
+              <g-td>Available</g-td>
+            </a>
+            <p>Delete</p>
+          </g-tr>
+
+          <g-tr>
+            <g-td>Adidas Ultra4D</g-td>
+            <g-td>$199.99</g-td>
+            <g-td>Available</g-td>
+            <g-td>Delete</g-td>
+          </g-tr>
+
+          <g-tr>
+            <g-td>Adidas UltraBoost</g-td>
+            <g-td>$201.99</g-td>
+            <g-td>Available</g-td>
+            <g-td>Delete</g-td>
+          </g-tr>
+
+          <!-- Look, a Turbo Frame here -->
+          <turbo-frame>
+            <g-tr>
+              <g-td>Adidas Ultra4D</g-td>
+              <g-td>$199.99</g-td>
+              <g-td>Available</g-td>
+              <g-td>Delete</g-td>
+            </g-tr>
+
+            <g-tr>
+              <g-td>Adidas UltraBoost</g-td>
+              <g-td>$201.99</g-td>
+              <g-td>Available</g-td>
+              <g-td>Delete</g-td>
+            </g-tr>
+          </turbo-frame>
         </g-tbody>
       </g-table>
     </g-responsive>
