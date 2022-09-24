@@ -1,16 +1,17 @@
 :root {
-  --gridtable-color:          inherit;
-  --gridtable-bg:             transparent;
-  --gridtable-border-color:   #dee2e6;
-  --gridtable-border-style:   solid;
-  --gridtable-accent-bg:      transparent;
-  --gridtable-th-font-weight: 700;
-  --gridtable-active-color:   rgb(33, 37, 41);
-  --gridtable-active-bg:      rgba(0, 0, 0, 0.1);
-  --gridtable-hover-color:    inherit;
-  --gridtable-hover-bg:       rgba(0, 0, 0, 0.05);
-  --gridtable-cell-padding-x: 0.75rem;
-  --gridtable-cell-padding-y: 0.75rem;
+  --gridtable-color:                  inherit;
+  --gridtable-bg:                     transparent;
+  --gridtable-border-color:         #dee2e6;
+  --gridtable-border-style:           solid;
+  --gridtable-accent-bg:              transparent;
+  --gridtable-th-font-weight:         700;
+  --gridtable-active-color:         rgb(33, 37, 41);
+  --gridtable-active-bg:            rgba(0, 0, 0, 0.1);
+  --gridtable-hover-color:            inherit;
+  --gridtable-hover-bg:             rgba(0, 0, 0, 0.05);
+  --gridtable-cell-padding-x:         0.75rem;
+  --gridtable-cell-padding-y:         0.75rem;
+  --gridtable-cell-display-property:  flex;
 }
 
 g-responsive {
@@ -29,8 +30,10 @@ g-table {
   margin: 0;
   min-width: max-content;
 
-  // Ensure inheritance is passed through turbo-frames
-  // Else add the class g-table-inherit.
+  // Ensure inheritance cascades through turbo-frames into nested table rows.
+  // Additionally you can add the class .g-table-inherit to any element you might
+  // be wrapping table rows in, this will carry through the grid-template-columns
+  // ensuring your layout is respected from the <g-table> down.
   turbo-frame,
   .gridtable-inherit {
     display: block;
@@ -67,7 +70,7 @@ g-tr {
   border-bottom-width: 1px;
 
   > * {
-    display: flex;
+    display: var(--gridtable-cell-display-property);
     overflow: visible;
     align-items: center;
     min-height: 50px;
@@ -79,10 +82,14 @@ g-tr {
   }
 }
 
+// Set a heavier font weight for th
 g-th {
   font-weight: var(--gridtable-th-font-weight);
 }
 
+
+// Utilities for effects on the tables.
+// .gridtable-bordered & .gridtable-borderless will only work on the custom HTML DOM Elements at the moment.
 .gridtable-bordered {
   border-width: var(--gridtable-border-color);
 
@@ -118,4 +125,3 @@ g-th {
     color: var(--gridtable-hover-color);
   }
 }
-
