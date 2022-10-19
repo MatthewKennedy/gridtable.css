@@ -9,6 +9,7 @@
   --gridtable-active-bg:            rgba(0, 0, 0, 0.1);
   --gridtable-hover-color:            inherit;
   --gridtable-hover-bg:             rgba(0, 0, 0, 0.05);
+  --gridtable-cell-min-height:        50px;
   --gridtable-cell-padding-x:         0.75rem;
   --gridtable-cell-padding-y:         0.75rem;
   --gridtable-cell-display-property:  flex;
@@ -73,8 +74,7 @@ g-tr {
     display: var(--gridtable-cell-display-property);
     overflow: visible;
     align-items: center;
-    min-height: 50px;
-    white-space: nowrap;
+    min-height: var(--gridtable-cell-min-height);
     margin: 0;
     padding: var(--gridtable-cell-padding-y) var(--gridtable-cell-padding-x);
     background-color: var(--gridtable-bg);
