@@ -1,6 +1,6 @@
 {
   "name": "gridtable.css",
-  "version": "0.1.6",
+  "version": "1.0.0",
   "description": "GridTable.css is simple way to create tables using custom DOM elements backed by the power of CSS Grid.",
   "main": "gridtable.scss",
   "files": [
