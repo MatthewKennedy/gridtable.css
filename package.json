@@ -1,7 +1,7 @@
 {
   "name": "gridtable.css",
   "version": "1.0.0",
-  "description": "GridTable.css is simple way to create tables using custom DOM elements backed by the power of CSS Grid.",
+  "description": "GridTable.css provides a simple way to create HTML tables using custom DOM elements backed by the power of CSS Grid.",
   "main": "gridtable.scss",
   "files": [
     "gridtable.css",
@@ -24,13 +24,9 @@
   "keywords": [
     "css",
     "html",
-    "gridtable.css",
-    "gridtable.org",
-    "gridtable",
-    "gridtable"
+    "gridtable.css"
   ],
   "devDependencies": {
-    "dart-sass": "^1.25.0",
-    "sass": "^1.54.9"
+    "sass": "^1.56.0"
   }
 }
